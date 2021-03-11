@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import carros from '../carros.svg';
 
 class CartWidget extends Component {
     render() {
         return (
-                <img alt="" src="../carros.svg"></img>
-        )
-    }
+    <div>
+        <a className="navbar-brand" href="s">
+      <img src={carros} alt="" width="30" height="24"></img>
+    </a>
+    </div>
+    )
+}
 }
 
 export default CartWidget;
