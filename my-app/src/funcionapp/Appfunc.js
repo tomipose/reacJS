@@ -1,16 +1,16 @@
-import {useState, useEffect} from "react"
+import { useState } from 'react'
+import ItemCount from '../components/ItemCount'
 
 const Appfunc = () => {
-    const [contador, setContador] = useState(0)
-
-     useEffect(()=> console.log("componentDidMount"))
-
-     return (
-        <div>
-             <button onClick = {() => setContador((contador) => contador + 1)}>Contar</button>
-            <div>Funcion componente y Hook</div>
-           contador : {contador}
-        </div>
-     )
+const [stockActual, setStockActual] = useState(5)
+   const restarStock = (e,nuevoStock) => { 
+      e.preventDefault();
+      setStockActual((stockActual) => stockActual - nuevoStock);
+   }
+   return (
+      <div className="App">
+         <ItemCount stock={stockActual} initial={1} onAdd={restarStock}/>
+      </div>
+   )
 }
 export default Appfunc;

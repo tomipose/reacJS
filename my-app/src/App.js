@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer'
+import Appfunc from './funcionapp/Appfunc'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <NavBar/>
         <ItemListContainer/>
+        <Appfunc/>
       </div>
     );
   }
